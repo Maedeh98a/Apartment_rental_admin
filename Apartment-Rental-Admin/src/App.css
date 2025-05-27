@@ -1,0 +1,51 @@
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.navbar{
+  background-color: rgb(34, 81, 81);
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  align-items: center;
+  height: 10vh;
+
+}
+
+.logo{
+  width: 60px;
+  height: 60px;
+  margin:10px;
+}
+.main-section{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70vh;
+  background-color: blanchedalmond;
+  padding: 0px;
+  
+}
+.sidebar{
+  background-color: blue;
+  width: 150px;
+  height: 100%;
+  
+
+}
+
+.footer{
+   background-color: rgb(34, 81, 81);
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  align-items: center;
+  height: 20vh;
+  
+}
+.text{
+  padding: 20px;
+
+}
