@@ -5,7 +5,8 @@ body{
 }
 
 .navbar{
-  background-color: rgb(34, 81, 81);
+  background-color: white;
+  color: #ff5a5f;
   display: flex;
   justify-content: flex-start;
   margin: 0;
@@ -13,7 +14,9 @@ body{
   height: 10vh;
 
 }
-
+#nav-line{
+  
+}
 .logo{
   width: 60px;
   height: 60px;
@@ -24,7 +27,7 @@ body{
   justify-content: space-around;
   align-items: center;
   height: 70vh;
-  background-color: blanchedalmond;
+  background-color: white;
   padding: 0px;
   overflow:scroll;
   
@@ -34,13 +37,14 @@ body{
   width: 150px;
   height: 70vh;
   position: sticky; 
+  top: 0px;
   
   
 
 }
 
 .footer{
-   background-color: rgb(34, 81, 81);
+   background-color:rgb(202, 201, 201);
   display: flex;
   justify-content: center;
   margin: 0;
@@ -54,6 +58,26 @@ body{
 }
 .listing{
   display: flex;
-  flex-direction: column;
   border: 1px solid rgb(87, 77, 25);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 5px;
+  
+ 
+}
+.description{
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px
+}
+.listing h4{
+  margin: 15px;
+}
+.listing button{
+  width: 60px;
+  margin: 10px;
+}
+#picture{
+  width: 300px;
+  height: 200px;
 }

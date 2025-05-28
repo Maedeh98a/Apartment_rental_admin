@@ -17,12 +17,18 @@ function ApartmentList() {
   return (
     <>
     <main>{data.map((eachData)=>{
-        return (<section className="listing">{eachData.name}
-                <h4>{eachData.has_availability ? "available": "not available"}</h4>
+        return (<article className="listing">
+            <section>
+                <img id='picture' src={eachData.picture_url} alt="picture"/>
+
+            </section>
+            <section className="description"><h2>{eachData.name}</h2>
+                <h4>Availability: {eachData.has_availability ? "✅": "❌"}</h4>
                 <button onClick={() =>{
                     handleDelete(eachData.id)
-                }}>delete</button>
-                </section>
+                }}>delete</button></section>
+            
+                </article>
 
     )})}
   </main>

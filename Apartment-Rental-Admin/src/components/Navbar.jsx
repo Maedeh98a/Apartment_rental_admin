@@ -6,7 +6,9 @@ function Navbar() {
       
         <img src="../src/assets/Airbnb.png" className="logo" alt="logo"/>
           <h3>Airbnb</h3>
+          <br id='nav-line'/> 
     </nav>
+    
   )
 }
 
