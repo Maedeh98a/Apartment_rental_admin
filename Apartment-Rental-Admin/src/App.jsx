@@ -2,16 +2,17 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
 import Footer from './components/Footer'
+import ApartmentList from './components/ApartmentList'
 
 function App() {
  
   return (
     <>
-    <body>
+    <main>
       <Navbar />
       <section className='main-section'>
-        <section>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat cum dolore placeat quibusdam ullam doloribus saepe fugiat sapiente, harum, quia eius vel doloremque, voluptas distinctio vitae eligendi ducimus totam rem.</p>
+       <section>
+             <ApartmentList/>
            
         </section>
         
@@ -20,7 +21,7 @@ function App() {
       </section>
       
       <Footer/>
-    </body>
+    </main>
       
       
     </>
