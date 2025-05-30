@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
-import {results} from "../data/listings.json"
 
-function ItemDetailsPage() {
+function ItemDetailsPage({data, setData}) {
   const{itemId} = useParams();
-  const itemDetails = results.find((result)=>{
+  const itemDetails = data.find((result)=>{
     if(result.id == itemId){
       return true
     }else{

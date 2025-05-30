@@ -16,8 +16,60 @@ body{
   border-bottom: 1px solid rgb(211, 211, 211);
 
 }
-#nav-line{
+.dashboard{
+  display: flex;
+  flex-direction: column;
+}
+#form{
+  border: 1px solid rgb(211, 211, 211);
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 5px
+
+}
+.form-style{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px 10px ;
+  padding: 0px
   
+}
+.ap-style{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+
+}
+input{
+  display: flex;
+  flex-wrap: wrap;
+  height: 20px;
+  width: 200px;
+  border-radius: 10px;
+  margin: 5px
+}
+.host-style{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+ 
+
+}
+#add-apartment{
+  text-align: center;
+}
+.create-btn{
+margin: 20px 270px;
+border-radius: 20px;
+border: 1px solid white;
+height: 30px;
+padding: 5px 10px;
+width:200px;
+background-color: #ff5a5f;
+color: white
+
 }
 .logo{
   width: 60px;

@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-import {results} from "../data/listings.json"
+
 import React, { useState } from 'react'
+import NewItemForm from "../components/NewItemForm";
 
 
-function DashboardPage() {
-  const [data, setData] = useState(results);
+function DashboardPage({data, setData}) {
+  
     function handleDelete(id){
          const deleteList = data.filter((newData) =>{
                         if(id !== newData.id){
@@ -18,7 +19,14 @@ function DashboardPage() {
     // console.log(data)
   return (
     <>
-    <main>{data.map((eachData)=>{
+    <main className="dashboard">
+        
+        <article id="form">
+        <h1 id='add-apartment'>Add Your Apartment</h1>
+        <NewItemForm data={data} setData={setData}/>
+        </article>
+    <article>
+        {data.map((eachData)=>{
         return (<Link to={`item-details/${eachData.id}`} key={eachData.id}><article className="listing">
             <section>
                 <img id='picture' src={eachData.picture_url} alt="picture"/>
@@ -33,6 +41,7 @@ function DashboardPage() {
                 </article></Link>
 
     )})}
+    </article>
   </main>
   </>
   )

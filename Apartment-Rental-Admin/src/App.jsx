@@ -8,20 +8,21 @@ import NotFoundPage from './Pages/NotFoundPage'
 import AboutPage from './Pages/AboutPage'
 import ItemDetailsPage from './Pages/itemDetailsPage'
 import { useState } from 'react'
+import {results} from "./data/listings.json"
 
 
 function App() {
- 
+ const [data, setData] = useState(results);
   return (
     <>
     <main>
       <Navbar />
       <section className='main-section'>
         <Routes>
-          <Route path='/' element={<DashboardPage/>}></Route>
+          <Route path='/' element={<DashboardPage data={data} setData={setData}/>}></Route>
           <Route path='*' element={<NotFoundPage/>}></Route>
           <Route path='/about' element={<AboutPage/>}></Route>
-          <Route path='/item-details/:itemId' element={<ItemDetailsPage/>}></Route>
+          <Route path='/item-details/:itemId' element={<ItemDetailsPage data={data} setData={setData}/>}></Route>
 
          
         </Routes>
