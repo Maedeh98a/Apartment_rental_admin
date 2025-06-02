@@ -9,6 +9,7 @@ import AboutPage from './Pages/AboutPage'
 import ItemDetailsPage from './Pages/itemDetailsPage'
 import { useState } from 'react'
 import {results} from "./data/listings.json"
+import UpdateItemForm from './components/UpdateItemForm'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path='*' element={<NotFoundPage/>}></Route>
           <Route path='/about' element={<AboutPage/>}></Route>
           <Route path='/item-details/:itemId' element={<ItemDetailsPage data={data} setData={setData}/>}></Route>
+          <Route path='/update/:itemId' element={<UpdateItemForm data={data} setData={setData}/>}></Route>
 
          
         </Routes>

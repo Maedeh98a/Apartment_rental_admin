@@ -27,18 +27,30 @@ function DashboardPage({data, setData}) {
         </article>
     <article>
         {data.map((eachData)=>{
-        return (<Link to={`item-details/${eachData.id}`} key={eachData.id}><article className="listing">
+        return (
+            <article className="listing" key={eachData.id}>
             <section>
+                <Link to={`item-details/${eachData.id}`} key={eachData.id}>
                 <img id='picture' src={eachData.picture_url} alt="picture"/>
+                </Link>
 
             </section>
+            
             <section className="description"><h2>{eachData.name}</h2>
                 <h4>Availability: {eachData.has_availability ? "✅": "❌"}</h4>
                 <button onClick={() =>{
                     handleDelete(eachData.id)
-                }}>delete</button></section>
+                }}>delete</button>
+                <Link to={`update/${eachData.id}`}>
+                <button onClick={() =>{
+                    
+                    console.log(eachData.id)
+                }}>update</button>
+                </Link>
+                </section>
+
             
-                </article></Link>
+                </article>
 
     )})}
     </article>
