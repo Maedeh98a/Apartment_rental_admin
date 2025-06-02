@@ -11,10 +11,10 @@ function UpdateItemForm({data, setData}) {
     console.log(updateItem)
     const[picture_url, SetPicture_url] = useState(updateItem.picture_url);
     const [name, setName] = useState(updateItem.name);
-    const [description, setDescription] = useState("");
+    const [description, setDescription] = useState(updateItem.description | "");
     const [host_name, setHost_Name] = useState(updateItem.host_name);
     const [host_picture_url, setHost_picture_url] = useState(updateItem.host_picture_url);
-    const [price, setPrice] = useState(0);
+    const [price, setPrice] = useState(updateItem.price | "");
     const nav = useNavigate();
 
 
@@ -61,7 +61,7 @@ function handleUpdateApartment(event){
                 <input name='name' type='text' value={name} onChange={handleNameChange}></input>
             </label>
             <label>Price
-                <input name='price' type='number' value={price} onChange={handlePriceChange}></input>
+                <input name='price' type='text' value={price} onChange={handlePriceChange}></input>
             </label>
             <div className='host-style'>
                 <label>Description

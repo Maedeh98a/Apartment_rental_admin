@@ -3,33 +3,34 @@ import {v4 as uuidv4} from "uuid";
 
 
 function NewItemForm({data, setData}) {
-const[picture_url, SetPicture_url] = useState("");
+    //Names doesn't matter in useStates
+const[pictureUrl, SetPictureUrl] = useState("");
 const [name, setName] = useState("");
 const [description, setDescription] = useState("");
-const [host_name, setHost_Name] = useState("");
-const [host_picture_url, setHost_picture_url]= useState("");
+const [hostName, setHostName] = useState("");
+const [hostPictureUrl, setHostPictureUrl]= useState("");
 const [price, setPrice] = useState(0);
 
 
 
 
-const handlePictureUrlChange = (e) => SetPicture_url(e.target.value);
+const handlePictureUrlChange = (e) => SetPictureUrl(e.target.value);
 const handleNameChange = (e) => setName(e.target.value);
 const handlePriceChange = (e) => setPrice(e.target.value);
 const handleDescriptionChange = (e) => setDescription(e.target.value);
-const handleFullNameChange = (e) => setHost_Name(e.target.value);
-const handleHostPictureChange = (e) => setHost_picture_url(e.target.value);
+const handleFullNameChange = (e) => setHostName(e.target.value);
+const handleHostPictureChange = (e) => setHostPictureUrl(e.target.value);
 
 
 function handleAddNewApartment(event){
     event.preventDefault();
     const apartmentToAdd = {
         id: uuidv4(),
-        picture_url,
+        picture_url:pictureUrl,
         name, 
         description, 
-        host_name, 
-        host_picture_url,
+        host_name: hostName, 
+        host_picture_url: hostPictureUrl,
         price
     }
     console.log(apartmentToAdd, data);
