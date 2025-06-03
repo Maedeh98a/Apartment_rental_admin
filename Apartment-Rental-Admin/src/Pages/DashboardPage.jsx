@@ -21,10 +21,7 @@ function DashboardPage({data, setData}) {
     <>
     <main className="dashboard">
         
-        <article id="form">
-        <h1 id='add-apartment'>Add Your Apartment</h1>
-        <NewItemForm data={data} setData={setData}/>
-        </article>
+        
     <article>
         {data.map((eachData)=>{
         return (

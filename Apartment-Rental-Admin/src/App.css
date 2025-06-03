@@ -7,15 +7,34 @@ body{
 
 .navbar{
   background-color: white;
+  border-bottom: 1px solid gray;
   color: #ff5a5f;
   display: flex;
-  justify-content: flex-start;
-  margin: 0;
+  justify-content: space-between;
+
   align-items: center;
   height: 10vh;
   border-bottom: 1px solid rgb(211, 211, 211);
-
 }
+
+.nav-links {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+align-content: flex-end;
+width: 400px;
+font-size: 12px;
+margin-right: 50px;
+}
+
+.nav-logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+}
+
 .dashboard{
   display: flex;
   flex-direction: column;
@@ -104,8 +123,17 @@ color: white
   margin: 0;
   align-items: center;
   height: 20vh;
-  
+  width: 100%;
 }
+
+.footer-links{
+  display: flex;
+  
+  justify-content: space-around;
+  font-size: 12px;
+  width: 500px;
+}
+
 .text{
   padding: 20px;
 
@@ -225,3 +253,4 @@ margin:10px 10px;
 .about-description h1{
   font-size: 28px;
 }
+

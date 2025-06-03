@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import {v4 as uuidv4} from "uuid";
+import { Navigate, useNavigate } from 'react-router-dom';
 
 
 function NewItemForm({data, setData}) {
     //Names doesn't matter in useStates
+ 
 const[pictureUrl, SetPictureUrl] = useState("");
 const [name, setName] = useState("");
 const [description, setDescription] = useState("");
@@ -14,6 +16,7 @@ const [price, setPrice] = useState(0);
 
 
 
+const nav = useNavigate();
 const handlePictureUrlChange = (e) => SetPictureUrl(e.target.value);
 const handleNameChange = (e) => setName(e.target.value);
 const handlePriceChange = (e) => setPrice(e.target.value);
@@ -34,7 +37,8 @@ function handleAddNewApartment(event){
         price
     }
     console.log(apartmentToAdd, data);
-    setData([apartmentToAdd, ...data ]);
+    setData([apartmentToAdd, ...data]);
+    nav("/");
 
 
 

@@ -10,6 +10,7 @@ import ItemDetailsPage from './Pages/itemDetailsPage'
 import { useState } from 'react'
 import {results} from "./data/listings.json"
 import UpdateItemForm from './components/UpdateItemForm'
+import AddNewAparatment from './Pages/AddNewAparatment'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <section className='main-section'>
         <Routes>
           <Route path='/' element={<DashboardPage data={data} setData={setData}/>}></Route>
+          <Route path='/add-apartment' element={<AddNewAparatment data={data} setData={setData}/>}></Route>
           <Route path='*' element={<NotFoundPage/>}></Route>
           <Route path='/about' element={<AboutPage/>}></Route>
           <Route path='/item-details/:itemId' element={<ItemDetailsPage data={data} setData={setData}/>}></Route>
@@ -28,7 +30,7 @@ function App() {
 
          
         </Routes>
-            <Sidebar/>
+            {/* <Sidebar/> */}
        
       </section>
       
